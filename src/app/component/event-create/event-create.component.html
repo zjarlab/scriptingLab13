@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+    <span>Feedback App</span>
+</mat-toolbar>
+<div>
+    <form>
+        <div>
+            <div>
+                <p>Enter Your Name: </p>
+                <input [(ngModel)]="pname" placeholder="Add Name" name="pname">
+            </div>
+            <div>
+                <p>Enter Feedback:</p>
+                <input [(ngModel)]="feedback" placeholder="Add feedback" name="feedback">
+            </div>
+            <button type="submit" *ngIf="pname!=='' && feedback!==''" (click)="onSubmit()">Add Feedback</button>
+        </div>
+    </form>
+</div>
